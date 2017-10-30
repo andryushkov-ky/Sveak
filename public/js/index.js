@@ -8,7 +8,8 @@ import {Provider} from 'react-redux'
 import {Router, Route} from 'react-router'
 
 import configureStore from 'store'
-import ClientsList from 'containers/clientsList'
+import Register from 'containers/register'
+import Client from 'containers/client'
 
 const store = configureStore();
 
@@ -17,7 +18,8 @@ const history = syncHistoryWithStore(browserHistory, store);
 ReactDOM.render(
     <Provider store={store}>
         <Router history={history}>
-            <Route path='/' component={ClientsList} />
+            <Route path='/' component={Register} />
+            {/*<Route path="/client/:id" component={Client} />*/}
         </Router>
     </Provider>,
     document.getElementById('root')
