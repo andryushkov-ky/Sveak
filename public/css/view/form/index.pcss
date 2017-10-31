@@ -1,5 +1,6 @@
 .form {
-    position: absolute;
+    display: none;
+    position: fixed;
     z-index:10;
     top: 0;
     right: 0;
@@ -12,6 +13,10 @@
     box-sizing: border-box;
     border: 1px solid #bccfe1;
     border-radius: 3px;
+
+    &--active {
+        display: block;
+    }
 }
 
 .form__header {
@@ -89,7 +94,7 @@
 .form__checkbox-ico {
     display: block;
     position: absolute;
-    top: 11px;
+    top: 10px;
     left: -25px;
     width: 14px;
     height: 14px;
@@ -115,4 +120,31 @@
     background-color: #337ab7;
     border: none;
     border-radius: 4px;
+}
+
+.form__close {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.form__close:hover {
+    opacity: 1;
+}
+.form__close:before, .form__close:after {
+    position: absolute;
+    left: 0;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #000;
+}
+.form__close:before {
+    transform: rotate(45deg);
+}
+.form__close:after {
+    transform: rotate(-45deg);
 }
