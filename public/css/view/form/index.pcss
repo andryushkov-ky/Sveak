@@ -44,8 +44,10 @@
 }
 
 .form__row {
+    position: relative;
     display: flex;
-    padding: 12px 45px 0 10px;
+    margin: 12px 45px 0 10px;
+    padding:8px 0 0;
     justify-content: flex-end;
     align-items: center;
 }
@@ -58,6 +60,7 @@
     border: 1px solid #e0dbdb;
     box-shadow: none;
     border-radius: 3px;
+    font-size: 14px;
 }
 
 .form__checkrow {
@@ -103,7 +106,7 @@
 }
 
 .form__checkblock {
-    margin: 35px auto;
+    margin: 25px auto 20px;
     padding-left: 55px;
     width: 210px;
 }
@@ -148,4 +151,18 @@
 }
 .form__close:after {
     transform: rotate(-45deg);
+}
+
+.form__error,
+.form__warning {
+    position: absolute;
+    display: flex;
+    top: -8px;
+    right: 0;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #ea0000;
+    & ~ .form__input-text {
+        border: 1px solid #ea0000;
+    }
 }

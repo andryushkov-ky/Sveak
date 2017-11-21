@@ -43,7 +43,7 @@
     "smoothscroll-polyfill": "^0.3.6",
     "superagent": "^3.5.2",
     "unique-string": "^1.0.0",
-    "validator": "^9.0.0"
+    "validator": "^9.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
